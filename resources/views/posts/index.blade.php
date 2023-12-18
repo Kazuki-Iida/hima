@@ -1,8 +1,10 @@
 <x-app-layout>
-    <h1>kaitokosuge★</h1>
-        <div class='grid grid-cols-3'>
+    <div class="w-[80%] m-auto">
+        
+    <h1 class="mt-10">kaitokosuge★</h1>
+        <div class='grid grid-cols-3 mt-10'>
             @foreach ($posts as $post)
-             <div class="p-5 rounded-[15px] border border-gray-400 w-[300px]">
+             <div class="p-5 rounded-[15px] border border-gray-400 w-[350px]">
                 <div class='post'>
                     <h2 class='title font-bold text-white'>{{ $post->title }}</h2>
                     <p class='body font-bold text-white mt-1' >{{ $post->body }}</p>
@@ -18,6 +20,8 @@
         <div class='paginate'>
             {{ $posts->links() }}
         </div>
+        
+        </div>
         <script>
             'use strict'
             function deletePost(id) {
@@ -27,4 +31,5 @@
                 }
             }
         </script>
+    
 </x-app-layout>

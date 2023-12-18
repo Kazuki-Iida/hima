@@ -23,14 +23,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('posts')->group(function () {
-    Route::get('/', [PostController::class, 'index'])->name('post.index');
-    Route::get('/posts/create', [PostController::class, 'create'])->name('post.create');
-    Route::get('/posts/{post}', [PostController::class, 'show'])->name('post.show');
-    Route::post('/posts', [PostController::class, 'store'])->name('post.store');
-    Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('post.edit');
-    Route::put('/posts', [PostController::class, 'update'])->name('post.update');
-    Route::delete('/posts', [PostController::class, 'delete'])->name('post.delete');
+Route::controller(PostController::class)->group(function () {
+    Route::get('/', 'index')->name('post.index');
+    Route::get('/posts/create', 'create')->name('post.create');
+    Route::get('/posts/{post}', 'show')->name('post.show');
+    Route::post('/posts', 'store')->name('post.store');
+    Route::get('/posts/{post}/edit', 'edit')->name('post.edit');
+    Route::put('/posts', 'update')->name('post.update');
+    Route::delete('/posts', 'delete')->name('post.delete');
 });
 
 Route::middleware('auth')->group(function () {

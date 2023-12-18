@@ -24,13 +24,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::controller(PostController::class)->group(function () {
-    Route::get('/', 'index')->name('post.index');
-    Route::get('/posts/create', 'create')->name('post.create');
-    Route::get('/posts/{post}', 'show')->name('post.show');
-    Route::post('/posts', 'store')->name('post.store');
-    Route::get('/posts/{post}/edit', 'edit')->name('post.edit');
-    Route::put('/posts', 'update')->name('post.update');
-    Route::delete('/posts', 'delete')->name('post.delete');
+    Route::get('/', 'index')->name('posts.index');
+    Route::get('/posts/create', 'create')->name('posts.create');
+    Route::get('/posts/{post}', 'show')->name('posts.show');
+    Route::post('/posts', 'store')->name('posts.store');
+    Route::get('/posts/{post}/edit', 'edit')->name('posts.edit');
+    Route::put('/posts/{post}', 'update')->name('posts.update');
+    Route::delete('/posts', 'delete')->name('posts.delete');
 });
 
 Route::middleware('auth')->group(function () {

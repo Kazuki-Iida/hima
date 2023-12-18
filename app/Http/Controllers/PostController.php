@@ -20,7 +20,7 @@ class PostController extends Controller
     
     public function create()
     {
-        return view('posts/create');
+        return view('posts.create');
     }
     
     public function store(PostRequest $request, Post $post)
@@ -28,7 +28,7 @@ class PostController extends Controller
         //$post->user_id = \Auth::id(); 
         $input = $request['post'];
         $post->fill($input)->save();
-        return redirect('/posts/' . $post->id);
+        return redirect()->route('posts.show', $post->id);
     }
   
     public function edit(Post $post)
@@ -41,7 +41,7 @@ class PostController extends Controller
         $input_post = $request['post'];
         $post->fill($input_post)->save();
         
-        return redirect('/posts/' . $post->id);
+        return redirect()->route('posts.update', $post->id);
     }
 
     public function delete(Post $post)

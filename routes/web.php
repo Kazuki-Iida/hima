@@ -29,7 +29,7 @@ Route::get('/posts', [PostController::class, 'create'])->name('post.create');
 Route::post('/posts', [PostController::class, 'store'])->name('post.store');
 Route::get('/posts/{post}', [PostController::class, 'edit'])->name('post.edit');
 Route::put('/posts', [PostController::class, 'update'])->name('post.update');
-Route::delete('/posts', [PostController::class, 'delete'])->name('post.delete');
+Route::delete('/posts/{post}', [PostController::class, 'delete'])->name('post.delete');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

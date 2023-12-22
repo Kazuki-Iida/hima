@@ -1,0 +1,96 @@
+/* common */
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+/* width */
+.w-80p {
+    width: 80%;
+}
+
+.w-60p {
+    width: 60%;
+}
+
+/* font */
+.f-xl {
+    font-size: 32px;
+}
+
+.f-lg {
+    font-size: 24px;
+}
+.f-md {
+    font-size: 16px;
+}
+.f-no {
+    font-size: 14px;
+}
+.f-sm {
+    font-size: 12px;
+}
+
+.f-bold {
+    font-weight: bold;
+}
+
+.tx-center {
+    text-align: center;
+}
+
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.al-center {
+    align-items: center;
+}
+
+/* head */
+.head {
+    margin-bottom: 40px;
+}
+
+/* margin */
+.mr-s {
+    margin-right: 10px;
+}
+
+.mx-center {
+    margin: 0 auto;
+}
+
+/* individual */
+.weight-head {
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+.f-container {
+    margin: 80px auto 0 auto;
+    max-width: 1000px;
+    padding-bottom: 200px;
+}
+
+.fighter-box {
+    border: 1px solid white;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.fighter-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.fighter-image img {
+    border-radius: 50%;
+}

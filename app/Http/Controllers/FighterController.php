@@ -14,10 +14,8 @@ class FighterController extends Controller
     {
         $fighters = [
             'bantam' => $fighter->where('weight', '<=', 61.2)->get(),
-            'feather' => $fighter->where('weight', '>', 61.2)
-                                ->where('weight', '<= 70.3')->get(),
-            'light' => $fighter->where('weight', '>', 70.3)
-                                ->where('weight', '<= 78.0')->get(),
+            'feather' => $fighter->where('weight', '>', 61.2)->where('weight', '<=', '70.3')->get(),
+            'light' => $fighter->where('weight', '>', 70.3)->where('weight', '<=', '78.0')->get(),
             'heavy' => $fighter->where('weight', '>', 78.0)->get()
         ];
         return view('fighters.index', compact('fighters'));

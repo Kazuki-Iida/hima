@@ -11,7 +11,11 @@
         <div class="fighters">
             <div class="flex al-center">
                 <div class="fighter-image">
+                    @if(!$fighter->image)
                     <img src="{{ asset('/images/noimage.png') }}" alt="">
+                    @else
+                    <img src="{{$fighter->image}}" alt="">
+                    @endif
                 </div>
                 <h3>{{ $fighter->name }}</h3>
             </div>

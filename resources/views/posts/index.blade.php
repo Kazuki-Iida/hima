@@ -5,7 +5,7 @@
     <a href="posts/create" class="p-[5px] rounded-[8px] bg-gray-600 mt-5 block w-[60px]">create</a>
         <div class='grid grid-cols-3 mt-10 gap-10'>
             @foreach ($posts as $post)
-                <a class="p-5 rounded-[15px] border border-gray-400 block"href={{"/posts/".$post->id}}>
+                <a class="p-5 rounded-[15px] border border-gray-100 block"href={{"/posts/".$post->id}}>
                     <div class='post'>
                         <h2 class='title font-bold text-white'>{{ $post->title }}</h2>
                         <p class='body font-bold text-white mt-1' >{{ $post->body }}</p>

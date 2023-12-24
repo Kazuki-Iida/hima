@@ -1,0 +1,19 @@
+.bg-colorfull{
+    background: linear-gradient(80deg,#538ebe,#0b375e,#0c1e47,#1c0832,#6a4213);
+    background-size: 250% 250%;
+    animation: 40s infinite bggradient;
+    position: relative;
+    width:100vw;
+}
+@keyframes bggradient {
+    0%{
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0%
+    }
+}

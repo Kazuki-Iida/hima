@@ -15,7 +15,8 @@ class PostController extends Controller
     
     public function show(Post $post)
     {
-        return view('posts.show')->with(['post' => $post]);
+        $threads = $post->threads();
+        return view('posts.show')->with(['post' => $post, 'thread' => $threads]);
     }
     
     public function create()

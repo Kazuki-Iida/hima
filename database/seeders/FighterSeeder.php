@@ -60,7 +60,7 @@ class FighterSeeder extends Seeder
             ],
             [
             'name' => '飯田一希',
-            'image'=> null,
+            'image'=> '/images/dorry.jpg',
             'height' => 200,
             'weight' =>87,
             'win' => 8,

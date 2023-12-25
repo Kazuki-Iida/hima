@@ -11,7 +11,11 @@
                 <a href="{{ route('fighters.show', ['fighter' => $fighter->id]) }}">
                 <div class="fighter-box w-80p flex al-center">
                     <div class="fighter-image">
+                        @if(!$fighter->image)
                         <img src="{{ asset('/images/noimage.png') }}" alt="">
+                        @else
+                        <img src="{{$fighter->image}}" alt="">
+                        @endif
                     </div>
                     <h3 class="mr-s">{{ $fighter->name }}</h3>
                     <p>{{ $fighter->height }}cm/</p>
@@ -27,7 +31,11 @@
                 <a href="{{ route('fighters.show', ['fighter' => $fighter->id]) }}">
                 <div class="fighter-box w-80p flex al-center">
                     <div class="fighter-image">
+                        @if(!$fighter->image)
                         <img src="{{ asset('/images/noimage.png') }}" alt="">
+                        @else
+                        <img src="{{$fighter->image}}" alt="">
+                        @endif
                     </div>
                     <h3 class="mr-s">{{ $fighter->name }}</h3>
                     <p>{{ $fighter->height }}cm/</p>
@@ -43,7 +51,11 @@
                 <a href="{{ route('fighters.show', ['fighter' => $fighter->id]) }}">
                 <div class="fighter-box w-80p flex al-center">
                     <div class="fighter-image">
+                        @if(!$fighter->image)
                         <img src="{{ asset('/images/noimage.png') }}" alt="">
+                        @else
+                        <img src="{{$fighter->image}}" alt="">
+                        @endif
                     </div>
                     <h3 class="mr-s">{{ $fighter->name }}</h3>
                     <p>{{ $fighter->height }}cm/</p>
@@ -59,7 +71,11 @@
                 <a href="{{ route('fighters.show', ['fighter' => $fighter->id]) }}">
                 <div class="fighter-box w-80p flex al-center">
                     <div class="fighter-image">
+                        @if(!$fighter->image)
                         <img src="{{ asset('/images/noimage.png') }}" alt="">
+                        @else
+                        <img src="{{$fighter->image}}" alt="">
+                        @endif
                     </div>
                     <h3 class="mr-s">{{ $fighter->name }}</h3>
                     <p>{{ $fighter->height }}cm/</p>
